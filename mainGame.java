@@ -11,6 +11,7 @@ public class mainGame extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
 	Texture img2;
+	public final String PROJECTVERSION = "2018MAY" ;
 
 
 	@Override
