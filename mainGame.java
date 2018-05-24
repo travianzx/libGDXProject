@@ -1,0 +1,38 @@
+package com.mygdx.first;
+
+import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.physics.box2d.World;
+
+public class mainGame extends ApplicationAdapter {
+	SpriteBatch batch;
+	Texture img;
+	Texture img2;
+
+
+	@Override
+	public void create () {
+		batch = new SpriteBatch();
+		img = new Texture("bg_second.jpeg");
+		img2 = new Texture("player2.png");
+	}
+
+	@Override
+	public void render () {
+		Gdx.gl.glClearColor(1, 0, 0, 1);
+		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+		batch.begin();
+		batch.draw(img, 0, 0,720,1196);
+		batch.draw(img2, 0 , 0, 128, 128);
+		batch.end();
+	}
+	
+	@Override
+	public void dispose () {
+		batch.dispose();
+		img.dispose();
+	}
+}
